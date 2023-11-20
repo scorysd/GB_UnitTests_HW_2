@@ -11,48 +11,50 @@ class VehicleTest {
     }
 
     @Test
+    @Disabled
     void testDrive() {
     }
 
     @Test
+    @Disabled
     void park() {
     }
 
     @Test
     @DisplayName("Car является Vehicle")
-    public void itsACar(){
+    public void itsACarTest(){
         Vehicle car = new Car("Mazda", "7", 2019);
         Assertions.assertInstanceOf(Vehicle.class, car);
     }
     @Test
     @DisplayName("4 колеса у машины")
-    public void fourWheels(){
+    public void fourWheelsTest(){
         Car car = new Car("Mazda", "7", 2019);
         Assertions.assertEquals(4 ,car.getNumWheels());
     }
     @Test
     @DisplayName("2 колеса у мото")
-    public void twoWheels(){
+    public void twoWheelsTest(){
         Motorcycle motorcycle = new Motorcycle("Kawa", "ninja", 2019);
         Assertions.assertEquals(2 ,motorcycle.getNumWheels());
     }
     @Test
     @DisplayName("скорость авто")
-    public void carSpeed(){
+    public void carSpeedTest(){
         Car car = new Car("Mazda", "7", 2019);
         car.testDrive();
         Assertions.assertEquals(60, car.getSpeed());
     }
     @Test
     @DisplayName("скорость мото")
-    public void motoSpeed(){
+    public void motoSpeedTest(){
         Motorcycle motorcycle = new Motorcycle("Kawa", "ninja", 2019);
         motorcycle.testDrive();
         Assertions.assertEquals(75 ,motorcycle.getSpeed());
     }
     @Test
     @DisplayName("парковка авто")
-    public void carPark(){
+    public void carParkTest(){
         Car car = new Car("Mazda", "7", 2019);
         car.testDrive();
         car.park();
@@ -60,7 +62,7 @@ class VehicleTest {
     }
     @Test
     @DisplayName("скорость мото")
-    public void motoPark(){
+    public void motoParkTest(){
         Motorcycle motorcycle = new Motorcycle("Kawa", "ninja", 2019);
         motorcycle.testDrive();
         motorcycle.park();
